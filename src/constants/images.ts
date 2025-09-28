@@ -1,17 +1,37 @@
-export type ImageType = 'cSharp' | 'css3' | 'html' | 'ico_dev' | 'java' | 'js' | 'kotlin' | 'portfolio' | 'postgresql' | 'prometheus' | 'react' | 'sqlServer' | 'tailwind';
+export type ImageType = 'api' | 'linux'|'aws' | 'cSharp' | 'chart' | 'computerdiv' | 'css3' | 'ts' | 'database' | 'div' | 'docker' | 'document' | 'git' | 'html' | 'ico_aws' | 'ico_dev' | 'ico_git' | 'java' | 'js' | 'kotlin' | 'nextjs' | 'performance' | 'portfolio' | 'postgresql' | 'prometheus' | 'react' | 'setting' | 'sqlServer' | 'system' | 'tailwind' | 'ui' | 'web';
 
 export const IMAGES: Record<ImageType, string> = {
+  api: "src/assets/img/api.png",
+  aws: "src/assets/img/aws.png",
   cSharp: "src/assets/img/cSharp.png",
+  chart: "src/assets/img/chart.png",
+  computerdiv: "src/assets/img/computerdiv.png",
   css3: "src/assets/img/css3.jpg",
+  database: "src/assets/img/database.png",
+  div: "src/assets/img/div.png",
+  docker: "src/assets/img/docker.png",
+  document: "src/assets/img/document.png",
+  git: "src/assets/img/git.png",
+  linux: "src/assets/img/linux.png",
   html: "src/assets/img/html.png",
+  ico_aws: "src/assets/img/ico_aws.png",
   ico_dev: "src/assets/img/ico_dev.png",
+  ico_git: "src/assets/img/ico_git.png",
   java: "src/assets/img/java.png",
   js: "src/assets/img/js.png",
+  ts: "src/assets/img/ts.png",
   kotlin: "src/assets/img/kotlin.png",
+  nextjs: "src/assets/img/nextjs.png",
+  performance: "src/assets/img/performance.png",
   portfolio: "src/assets/img/portfolio.png",
   postgresql: "src/assets/img/postgresql.png",
   prometheus: "src/assets/img/prometheus.png",
   react: "src/assets/img/react.svg",
+  setting: "src/assets/img/setting.png",
   sqlServer: "src/assets/img/sqlServer.png",
+  system: "src/assets/img/system.png",
   tailwind: "src/assets/img/tailwind.png",
+  ui: "src/assets/img/ui.png",
+  web: "src/assets/img/web.png",
+
 };

@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import GalaxyBackground from "../Hero/galaxyBackground";
 
 export default function IntroPage() {
     const [isShow, setIsShow] = useState(true);
@@ -24,7 +23,7 @@ export default function IntroPage() {
                     exit={{ opacity: 0, scale: 1.1 }}
                     transition={{ duration: 2, ease: "easeInOut" }}
                 >
-                    <GalaxyBackground />
+                    {/* <GalaxyBackground /> */}
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

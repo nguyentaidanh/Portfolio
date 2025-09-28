@@ -1,4 +1,4 @@
-import { ProfileData } from "@/data/person.data";
+import { ProfileData } from "@/data/personal.data";
 import ScrollProgressBar from "../Hero/scrollProgressBar";
 import { useEffect, useState } from "react";
 import type { HeaderType } from "@/types/header.type";
@@ -10,7 +10,7 @@ const dataSection: HeaderType[] = [
         ref: "home", tips: "Go to general", name: "Home",
     },
     {
-        ref: "about", tips: "My skills", name: "Skills",
+        ref: "about", tips: "My skills", name: "Developer skills",
     },
     {
         ref: "portfolio", tips: "History", name: "History",

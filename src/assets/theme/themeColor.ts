@@ -6,11 +6,11 @@ export const theme = {
         text: "#111827",
         accent: "#3B82F6",
         muted: "#9CA3AF",
-        border: "#E5E7EB",
+        border: "#52507a87",
         highlight: "#2563EB",
         error: "#EF4444",
         success: "#10B981",
-        warning: "#F59E0B"
+        warning: "#F59E0B",
     }
 } as const
 

@@ -1,4 +1,4 @@
-import { ProfileData } from "@/data/person.data";
+import { ProfileData } from "@/data/personal.data";
 import { Card } from "../ui/card";
 import { Cake, Mail, MapPinHouse, Phone } from "lucide-react";
 import LayoutSection from "./layoutsection";
@@ -8,10 +8,10 @@ export default function GeneralSession() {
     return (
         <LayoutSection id="home" >
         
-            <div className="basis-1/3  ">
+            <div className="basis-1/3 flex-1 ">
                 <img src={ProfileData.avatar} alt="profile" className="w-full h-auto rounded-lg" />
             </div>
-            <Card className="basis-2/3 bg-black/60 border-md border-sky-700 text-left p-4 justify-start  text-white">
+            <Card className=" basis-2/3 bg-black/60 border-md border-sky-700 text-left p-4 justify-start  text-white">
 
                 <h2 className="mb-2  text-2xl"><strong>{ProfileData.fullName} – {ProfileData.career}</strong> </h2>
 
