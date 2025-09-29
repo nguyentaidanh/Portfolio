@@ -16,8 +16,5 @@ export default defineConfig({
     host: process.env.VITE_HOST || 'localhost',
     open: process.env.VITE_HOST ? `http://${process.env.VITE_HOST}:${process.env.VITE_PORT}` : true,
    
-  },
-  define: {
-    'process.env': process.env
   }
 })

@@ -10,7 +10,7 @@ const dataSection: HeaderType[] = [
         ref: "home", tips: "Go to general", name: "Home",
     },
     {
-        ref: "about", tips: "My skills", name: "Developer skills",
+        ref: "about", tips: "My skills", name: "Developer",
     },
     {
         ref: "portfolio", tips: "History", name: "History",
