@@ -1,7 +1,9 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+ 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -116,22 +118,25 @@ button:focus-visible {
 
 
 html {
-  scroll-snap-type: y mandatory;   /* kích hoạt snap dọc toàn trang */
-  scroll-padding-top: var(--header-height);
+  /* scroll-snap-type: y mandatory;     */
+  /* scroll-padding-top: var(--header-height); */
   scroll-behavior: smooth;
 }
 
 section {
 
-  scroll-snap-align: start;        /* mỗi section “bắt” đầu màn hình */
+  scroll-snap-align: start;       
 }
 section {
-  min-height: calc(100vh - var(--header-height));
-  height: calc(100vh - var(--header-height));
+  /* min-height: calc(100vh - var(--header-height)); */
+  /* height: calc(100vh - var(--header-height)); */
+  min-height:100vh;
   padding: 2rem;
 
   box-sizing: border-box;
-}
+} 
+
+
 /* img {
   transition: all 0.3s ease-in-out;
 }

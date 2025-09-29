@@ -1,64 +1,71 @@
 import { useEffect, useState } from "react";
 
-
 type TypingTextProps = {
-    fullText: string;
-    typingSpeed?: number; // Speed in milliseconds for each character
-    deletingSpeed?: number; // Speed in milliseconds for each character
-    pauseDelay?: number; // time to pause after full text is typed (ms)
+  fullText: string;
+  typingSpeed?: number; // Speed in milliseconds for each character
+  deletingSpeed?: number; // Speed in milliseconds for each character
+  pauseDelay?: number; // time to pause after full text is typed (ms)
 };
 
-const TypingText: React.FC<TypingTextProps> = ({ fullText, typingSpeed = 100, deletingSpeed = 50, pauseDelay = 4000 }) => {
+const TypingText: React.FC<TypingTextProps> = ({
+  fullText,
+  typingSpeed = 100,
+  deletingSpeed = 50,
+  pauseDelay = 4000,
+}) => {
+  const [displayed, setDisplayed] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
 
-    const [displayed, setDisplayed] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
+    const updateText = () => {
+      setDisplayed((prev) => {
+        if (!isDeleting) {
+          // Đang gõ
+          const next = fullText.slice(0, prev.length + 1);
+          if (next === fullText) {
+            // Gõ xong: chờ rồi bắt đầu xoá
+            setTimeout(() => setIsDeleting(true), pauseDelay);
+          }
+          return next;
+        } else {
+          // Đang xoá
+          const next = fullText.slice(0, prev.length - 1);
+          if (next === "") {
+            // Xoá hết: bắt đầu gõ lại
+            setIsDeleting(false);
+          }
+          return next;
+        }
+      });
+    };
 
+    // eslint-disable-next-line prefer-const
+    timer = setTimeout(updateText, isDeleting ? deletingSpeed : typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayed, isDeleting]);
 
-    useEffect(() => {
-        let timer: NodeJS.Timeout;
-
-        const updateText = () => {
-            setDisplayed((prev) => {
-                if (!isDeleting) {
-                    // Đang gõ
-                    const next = fullText.slice(0, prev.length + 1);
-                    if (next === fullText) {
-                        // Gõ xong: chờ rồi bắt đầu xoá
-                        setTimeout(() => setIsDeleting(true), pauseDelay);
-                    }
-                    return next;
-                } else {
-                    // Đang xoá
-                    const next = fullText.slice(0, prev.length - 1);
-                    if (next === "") {
-                        // Xoá hết: bắt đầu gõ lại
-                        setIsDeleting(false);
-                    }
-                    return next;
-                }
-            });
-        };
-
-        // eslint-disable-next-line prefer-const
-        timer = setTimeout(updateText, isDeleting ? deletingSpeed : typingSpeed);
-        return () => clearTimeout(timer);
-    }, [displayed, isDeleting]);
-
-    return (
-        <div className="h-12 flex items-center"> {/* ✅ Chiều cao cố định */}
-      <span className="text-2xl font-bold leading-none 
+  return (
+    <div className="h-12 flex items-center">
+      {" "}
+      {/* ✅ Chiều cao cố định */}
+      <span
+        className="text-md lg:text-2xl font-bold leading-none 
                  bg-gradient-to-r from-pink-500 via-green-500 to-blue-500
-                 bg-clip-text text-transparent">
+                 bg-clip-text text-transparent"
+      >
         {displayed}
         <span className="animate-pulse">|</span>
       </span>
     </div>
+  );
+};
 
-    )
-}
-const TypingTextConst: React.FC<TypingTextProps> = ({ fullText, typingSpeed = 30 }) => {
- 
+const TypingTextConst: React.FC<TypingTextProps> = ({
+  fullText,
+  typingSpeed = 30,
+}) => {
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
@@ -72,18 +79,7 @@ const TypingTextConst: React.FC<TypingTextProps> = ({ fullText, typingSpeed = 30
     return () => clearInterval(timer);
   }, []);
 
-
-    return(
- <div className="h-12 flex items-center"> {/* ✅ Chiều cao cố định */}
-      <span >
-        {displayed}
-        <span className="animate-pulse">|</span>
-      </span>
-    </div>
-
-    );
-
-
-}
+  return <span>{displayed}</span>;
+};
 
 export { TypingText, TypingTextConst };
