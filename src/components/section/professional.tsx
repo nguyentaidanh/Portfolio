@@ -25,24 +25,26 @@ export default function ProfessionalSection() {
               key={skill.name}
             >
               <img src={skill.icon} className="h-10 w-10" />
-              <span>{skill.name}</span>
+              <span className="text-2xl lg:text-lg">{skill.name}</span>
             </Card>
           ))}
         </div>
         <h1 className="text-white">Tech Stack</h1>
         <div className="grid lg:grid-cols-3 gap-2">
           <Card className="bg-black/60 border-md  text-center p-4 h-full text-white justify-center">
-            <h2>Fontend</h2>
-            <Separator className={`bg-[${theme.colors.border}] `} />
-            <div className="grid grid-cols-2 gap-2 mt-2">
+            <h2 className="text-2xl lg:text-lg">
+              Fontend{" "}
+              <Separator className={`bg-[${theme.colors.border}] mt-2 `} />
+            </h2>
+            <div className="grid grid-cols-2 gap-2 ">
               {ProfileData.fontend.map((skill) => (
                 <div
-                  className="flex flex-row gap-2 rounded-lg "
+                  className="flex flex-row gap-2 rounded-lg items-center justify-start "
                   key={skill.name}
                 >
                   <img
                     src={skill.icon}
-                    className={`h-5 w-5 rounded-lg ${skill.color}`}
+                    className={`h-10 w-10 lg:h-5 lg:w-5  ${skill.color}`}
                   />
                   <span>{skill.name}</span>
                 </div>
@@ -50,9 +52,11 @@ export default function ProfessionalSection() {
             </div>
           </Card>
           <Card className="bg-black/60 border-md border-sky-700 text-center p-4 h-full text-white">
-            <h2>Backend & Database</h2>
-            <Separator className={`bg-[${theme.colors.border}] `} />
-            <div className="grid grid-cols-2 gap-2 mt-2">
+            <h2 className="text-2xl lg:text-lg">
+              Backend & Database{" "}
+              <Separator className={`bg-[${theme.colors.border}]  mt-2`} />
+            </h2>
+            <div className="grid grid-cols-2 gap-2">
               {ProfileData.backend.map((skill) => (
                 <div
                   className="flex flex-row gap-2 rounded-lg "
@@ -60,7 +64,7 @@ export default function ProfessionalSection() {
                 >
                   <img
                     src={skill.icon}
-                    className={`h-5 w-5 rounded-lg ${skill.color}`}
+                    className={`h-10 w-10 lg:h-5 lg:w-5 rounded-lg ${skill.color}`}
                   />
                   <span>{skill.name}</span>
                 </div>
@@ -68,9 +72,12 @@ export default function ProfessionalSection() {
             </div>
           </Card>
           <Card className="bg-black/60 border-md border-sky-700 text-center p-4 h-full text-white">
-            <h2>Tools & DevOps</h2>
-            <Separator className={`bg-[${theme.colors.border}] `} />
-            <div className="grid grid-cols-2 gap-2 mt-2">
+            <h2 className="text-2xl lg:text-lg">
+              Tools & DevOps{" "}
+              <Separator className={`bg-[${theme.colors.border}]  mt-2 `} />
+            </h2>
+
+            <div className="grid grid-cols-2 gap-2">
               {ProfileData.devOps.map((skill) => (
                 <div
                   className="flex flex-row gap-2 rounded-lg "
@@ -78,7 +85,7 @@ export default function ProfessionalSection() {
                 >
                   <img
                     src={skill.icon}
-                    className={`h-5 w-5 rounded-lg ${skill.color}`}
+                    className={`h-10 w-10 lg:h-5 lg:w-5 rounded-lg ${skill.color}`}
                   />
                   <span>{skill.name}</span>
                 </div>

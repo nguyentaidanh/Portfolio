@@ -47,9 +47,7 @@ const TypingText: React.FC<TypingTextProps> = ({
   }, [displayed, isDeleting]);
 
   return (
-    <div className="h-12 flex items-center">
-      {" "}
-      {/* ✅ Chiều cao cố định */}
+    <div className=" flex items-center">
       <span
         className="text-md lg:text-2xl font-bold leading-none 
                  bg-gradient-to-r from-pink-500 via-green-500 to-blue-500

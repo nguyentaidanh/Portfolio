@@ -31,7 +31,7 @@ export default function GeneralSession() {
           />
         </div>
         {/* <p className="mb-2"> {ProfileData.introduction}</p> */}
-        <span className="text-md lg:text-2xl font-bold">
+        <span className="text-md lg:text-2xl font-bold flex flex-col gap-2 lg:gap-4">
           <p className=" inline-flex items-center gap-2 text-xs lg:text-xl">
             <Mail className="w-5 h-5" />
             {ProfileData.email}

@@ -45,7 +45,7 @@ export default function NavbarDock() {
     // --- Desktop Dock Navbar ---
     return (
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-        <div className="flex items-center gap-4 px-6 py-3 bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-lg">
+        <div className="flex items-center gap-4 px-6 py-3 bg-gray-700/90 backdrop-blur-md rounded-2xl shadow-lg">
           {menus.map((menu, i) => {
             const Icon = menu.icon;
             const isActive = active === menu.name;
@@ -57,7 +57,7 @@ export default function NavbarDock() {
                 className={`relative w-12 h-12 flex items-center justify-center rounded-xl transition-all duration-300
                   ${
                     isActive
-                      ? "bg-white text-black scale-110"
+                      ? "bg-white text-white scale-110 font-bold"
                       : "text-gray-300 hover:text-white hover:bg-gray-700"
                   }
                 `}
