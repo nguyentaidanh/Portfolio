@@ -7,6 +7,7 @@ import avatar from '../assets/images/avatar.jpg';
 import zenith from '../assets/images/zenith.png';
 import finTrax from '../assets/images/finTrax1.png';
 import fuaha from '../assets/images/fuaha.png';
+import Cv from '../assets/files/Nguyen-Tai-Danh.pdf'
 
 export const PERSONAL_INFO = {
     name: "Nguyễn Tài Danh",
@@ -16,7 +17,7 @@ export const PERSONAL_INFO = {
     linkedin: "https://www.linkedin.com/in/danh-nguyen-8a02b838b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     github: "https://github.com/nguyentaidanh",
     githubUsername: "nguyentaidanh",
-    cvPath: "/alex_doe_cv.pdf"
+    cvPath: Cv,
 };
 
 const iconClass = "w-12 h-12 text-highlight group-hover:scale-105 transition-transform duration-300";

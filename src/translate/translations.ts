@@ -50,7 +50,6 @@ export const translations = {
       { key: "git", name: "Git" },
       { key: "docker", name: "Docker" },
       { key: "linux", name: "Linux" },
-      { key: "nodejs", name: "Node.js" },
     ],
     projects_section: {
       title: "My Projects"
@@ -108,7 +107,7 @@ export const translations = {
         type: 'experience',
         data: {
           title: "Software Developer",
-          company: "ITD Solutions JSC",
+          company: "ITD Solutions",
           location: "Ho Chi Minh City, Vietnam",
           date: "2021 - 2025",
           description: [
@@ -212,8 +211,7 @@ export const translations = {
       { key: "aws", name: "AWS" },
       { key: "git", name: "Git" },
       { key: "docker", name: "Docker" },
-      { key: "linux", name: "Linux" },
-      { key: "nodejs", name: "Node.js" },
+      { key: "linux", name: "Linux" }, 
     ],
     projects_section: {
       title: "Các dự án"
