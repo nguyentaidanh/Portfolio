@@ -44,7 +44,7 @@ export const PROJECT_ASSETS: { [key: string]: { imageUrl: string; demoUrl: strin
     },
     p2: {
         imageUrl: finTrax,
-        demoUrl: "#",
+        demoUrl: "https://fintrax-rouge.vercel.app",
         githubUrl: "https://github.com/nguyentaidanh/FINTRAX.git",
     },
     p3: {
