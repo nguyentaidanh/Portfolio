@@ -7,7 +7,7 @@ import avatar from '../assets/images/avatar.jpg';
 import zenith from '../assets/images/zenith.png';
 import finTrax from '../assets/images/finTrax1.png';
 import fuaha from '../assets/images/fuaha.png';
-import Cv from '../assets/files/Nguyen-Tai-Danh.pdf'
+import Cv from '../assets/files/Nguyen-Tai-Danh-CV_F.pdf'
 
 export const PERSONAL_INFO = {
     name: "Nguyễn Tài Danh",
