@@ -1,0 +1,5 @@
+{
+  "name": "React Developer Portfolio",
+  "description": "A modern and professional portfolio website for a React developer, built with React, TypeScript, and Tailwind CSS. It features sections for about, skills, projects, and contact information, along with a dark mode theme toggle.",
+  "requestFramePermissions": []
+}
